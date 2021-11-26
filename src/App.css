@@ -21,15 +21,40 @@
   height: 500px;
 }
 
-#image {
-  margin-top: 50px;
+/* image */
+#image-container {
+  margin-top: 20px;
 }
 
+#image {
+  animation: imageFadeIn 7s;
+}
+
+@keyframes imageFadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+/* text area */
 #text-area-container {
-  height: 150px;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+  padding: 10px;
+  height: 200px;
   font-size: large;
 }
 
+.type-writer-text{
+  animation: textFadeIn 3s;
+}
+
+@keyframes textFadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+/* control containers */
 #controls {
   border: none;
   height: 200px;
@@ -55,6 +80,7 @@
  width: 170px;
 }
 
+/* buttons */
 .button {
   border: none;
   padding: 15px;
