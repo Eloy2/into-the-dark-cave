@@ -7,12 +7,20 @@ function Controls() {
   const currentRoom = useSelector(state => state.currentRoom)
   const dispatch = useDispatch()
 
+  /*
+    If there are items in the room
+    take them. 
+  */
   const takeItemHandler = () => {
     if (currentRoom.itemsInRoom.length > 0) {
       dispatch(takeItem())
     }
   }
 
+  /*
+    Check if there is a room in that direction.
+    If there isn't then set noMove flag in store to true.
+  */
   const moveRoomHandler = (direction) => {
     if (currentRoom[direction]) {
       dispatch(moveRoom(currentRoom[direction]))

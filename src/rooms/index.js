@@ -1,7 +1,9 @@
 import { Room } from '../classes';
 import { outside, foyer, overlook, narrow, treasure } from '../images';
 
-// set up rooms
+/*
+  Create each room using the Room class
+*/
 const rooms = {
   'outside': new Room(
     'Outside Cave Entrance',
@@ -40,7 +42,11 @@ const rooms = {
   )
 }
 
-// link rooms together
+/*
+ Link rooms together by adding properties that point
+ to other rooms. The name of each property is the direction
+ that the other room is in. 
+*/ 
 rooms['outside'].n_to = rooms['foyer']
 rooms['foyer'].s_to = rooms['outside']
 rooms['foyer'].n_to = rooms['overlook']

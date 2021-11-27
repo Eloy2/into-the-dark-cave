@@ -7,6 +7,9 @@ function App() {
   const currentRoom = useSelector(state => state.currentRoom)
   const [image, setImage] = useState();
 
+  /*
+    Updates image when current room changes 
+  */
   useEffect(() => {
     setImage(currentRoom.image)
   }, [currentRoom.image])
