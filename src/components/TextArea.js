@@ -9,14 +9,14 @@ function TextArea() {
       <p key={state.currentRoom.name} className='fade-in-text'>
         {`You are in the ${state.currentRoom.name}. ${state.currentRoom.description}`}
       </p>
-      <p key={state.currentRoom.itemsInRoom} className='fade-in-text'>
+      <p key={state.currentRoom.itemsInRoom} className='fade-in-text' id='items-in-room-text'>
         {state.currentRoom.itemsInRoom.length > 0 ? 
-          `Items in this room: ${state.currentRoom.itemsInRoom.join(", ")}` 
+          `Items in this room: ${state.currentRoom.itemsInRoom.join(', ')}`
           : 
           'There are no items in this room.'
         }
       </p>
-      <p key={state.inventory.length} className='fade-in-text'>
+      <p key={state.inventory.length} className='fade-in-text' id='inventory-text'>
         {state.inventory.length > 0 ?
           `Items in your inventory: ${state.inventory.join(', ')}`
           :
